@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "minimalpackage"
-dynamic = ["version"]
+dynamic = ["version", "dependencies"]
 description = "Example of minimal package."
 license = { text = "MIT" }
 readme = "README.rst"
@@ -19,8 +19,6 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
 ]
-dependencies = [
-]
 
 [[project.authors]]
 name = "Gilberto Agostinho"
@@ -28,11 +26,12 @@ email = "gilbertohasnofb@gmail.com"
 
 [project.optional-dependencies]
 dev = [
-    "pytest==8.3.5",
+    "pytest==8.4.0",
 ]
 
 [project.urls]
-Homepage = "https://github.com/gilbertohasnofb/minimalpackage"
+homepage = "https://github.com/gilbertohasnofb/minimalpackage"
+source = "https://github.com/gilbertohasnofb/minimalpackage"
 
 [tool.pytest.ini_options]
 pythonpath = 'src'
@@ -45,7 +44,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.package-data]
 "*" = ["LICENSE", "README.rst"]
-"minimalpackage" = ["**/*"]
 
 [tool.setuptools.dynamic]
 version = {attr = "minimalpackage.__version__"}
+dependencies = {file = ["requirements.txt"]}

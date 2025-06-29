@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minimalpackage"
+description = "Example of minimal package."
+license = { text = "MIT" }
+readme = "README.rst"
+requires-python = ">=3.9"
+keywords = ["minimalpackage"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+]
+
+[[project.authors]]
+name = "Gilberto Agostinho"
+email = "gilbertohasnofb@gmail.com"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/gilbertohasnofb/minimalpackage"
+
+[tool.pytest.ini_options]
+pythonpath = 'src'
+testpaths = 'tests'
+
+[tool.setuptools]
+include-package-data = true
+packages = ["minimalpackage"]
+package-dir = { "" = "src" }
+
+[tool.setuptools.package-data]
+"*" = ["LICENSE", "README.rst"]
+"minimalpackage" = ["**/*"]
+
+[tool.setuptools_scm]
+version_file = "src/example/_version.py"

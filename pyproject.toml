@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "minimalpackage"
-dynamic = ["version", "readme"]
+dynamic = ["version"]
 description = "Example of minimal package."
 license = { text = "MIT" }
 readme = "README.rst"
@@ -49,4 +49,3 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.dynamic]
 version = {attr = "minimalpackage.__version__"}
-readme = {file = ["README.rst"]}

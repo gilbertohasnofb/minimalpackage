@@ -1,3 +1,5 @@
+"""minimalpackage docstring"""
+
 from .module1.function1 import function1
 from .module1.Class1 import Class1
 

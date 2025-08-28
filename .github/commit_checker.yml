@@ -1,0 +1,14 @@
+name: Commit Checker
+on: [push]
+jobs:
+  test_code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: make setup
+    steps:
+      - name: Unit tests
+        uses: make test
+    steps:
+      - name: Check formatting
+        uses: make lint

@@ -26,8 +26,6 @@ email = "gilbertohasnofb@gmail.com"
 
 [project.optional-dependencies]
 dev = [
-    "black==25.1.0",
-    "pytest==8.4.0",
     "setuptools==80.9.0",
 ]
 

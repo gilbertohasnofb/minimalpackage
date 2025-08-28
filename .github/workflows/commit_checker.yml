@@ -6,9 +6,9 @@ jobs:
     steps:
       - name: Setup
         uses: make setup
-    steps:
+        
       - name: Unit tests
         uses: make test
-    steps:
+        
       - name: Check formatting
         uses: make lint

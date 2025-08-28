@@ -1,6 +1,5 @@
-import minimalpackage
+from minimalpackage.module1 import function1
 
 
 def test_function1():
-    """test docstring"""
-    assert minimalpackage.function1() == 'function1'
+    assert function1() == "function1"

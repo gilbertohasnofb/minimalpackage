@@ -1,4 +1,3 @@
 def function1():
     """Doctsring"""
-    return 'function1'
-
+    return "function1"

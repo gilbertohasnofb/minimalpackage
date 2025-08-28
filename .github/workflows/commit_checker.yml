@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: make setup
+        run: make setup
         
       - name: Unit tests
-        uses: make test
+        run: make test
         
       - name: Check formatting
-        uses: make lint
+        run: make lint

@@ -7,7 +7,7 @@ name = "minimalpackage"
 dynamic = ["version", "dependencies"]
 description = "Example of minimal package."
 license = { text = "MIT" }
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.9"
 keywords = ["minimalpackage"]
 classifiers = [
@@ -27,6 +27,8 @@ email = "gilbertohasnofb@gmail.com"
 [project.optional-dependencies]
 dev = [
     "black==25.1.0",
+    "pytest==8.4.0",
+    "setuptools==80.9.0",
 ]
 
 [project.urls]
@@ -43,7 +45,7 @@ packages = ["minimalpackage"]
 package-dir = { "" = "src" }
 
 [tool.setuptools.package-data]
-"*" = ["LICENSE", "README.rst"]
+"*" = ["LICENSE", "README.md"]
 "minimalpackage" = ["**/*"]
 
 [tool.setuptools.dynamic]

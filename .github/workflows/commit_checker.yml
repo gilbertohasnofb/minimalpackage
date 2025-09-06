@@ -10,8 +10,17 @@ jobs:
       - name: Setup
         run: make setup
         
+      - name: Check formatting with Black
+        run: make black_check
+
+      - name: Check import order with isort
+        run: make isort
+
+      - name: Check with Flake8
+        run: make flake8
+
+      - name: Check docstrings with Pydocstyle
+        run: make pydocstyle
+
       - name: Unit tests
-        run: make test
-        
-      - name: Check formatting
-        run: make lint
+        run: make unit_tests

@@ -4,10 +4,10 @@ PYTHON := .venv/bin/python
 		reformat setup
 
 # Setup
-.venv/.installed: title/requirements.txt
+.venv/.installed: requirements.txt
 	python3 -m venv .venv
 	.venv/bin/pip install --upgrade pip
-	.venv/bin/pip install -r title/requirements.txt
+	.venv/bin/pip install -r requirements.txt
 	touch .venv/.installed
 setup: .venv/.installed
 

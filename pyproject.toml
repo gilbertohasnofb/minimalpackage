@@ -49,3 +49,18 @@ package-dir = { "" = "src" }
 [tool.setuptools.dynamic]
 version = {attr = "minimalpackage.__version__"}
 dependencies = {file = ["requirements.txt"]}
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+case_sensitive = true
+line_length = 100
+multi_line_output = 3
+skip_gitignore = true
+include_trailing_comma = true
+use_parentheses = true
+
+[tool.pydocstyle]
+match_dir = "minimalpackage"
+select = ["D101", "D102", "D103", "D105", "D300", "D301"]

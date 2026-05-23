@@ -7,7 +7,7 @@ name = "minimalpackage"
 description = "Example of minimal package."
 authors = [{name = "Gilberto Agostinho", email = "gilbertohasnofb@gmail.com"}]
 readme = "README.md"
-license = { text = "MIT" }
+license = {file = "LICENSE"}
 requires-python = ">=3.10"
 dynamic = ["version", "dependencies", "optional-dependencies"]
 keywords = ["minimalpackage", "template"]
@@ -38,14 +38,14 @@ package-dir = { "" = "src" }
 "minimalpackage" = ["*.json"]
 
 [tool.setuptools.dynamic]
-version = {attr = "minimalpackage.__version__"}
+version = {attr = "minimalpackage._version.__version__"}
 dependencies = {file = ["requirements.txt"]}
-optional-dependencies.test = { file = ["requirements-test.txt"] }
-optional-dependencies.dev = { file = ["requirements-dev.txt"] }
+optional-dependencies.dev = {file = ["requirements-dev.txt"]}
+optional-dependencies.test = {file = ["requirements-test.txt"]}
 
 [tool.black]
 line-length = 100
-target-version = ["py310"]
+target-version = ["py310", "py311", "py312", "py313"]
 
 [tool.isort]
 case_sensitive = true

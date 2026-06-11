@@ -1,7 +1,12 @@
 # Sandbox file for quick and dirty tests
 # -----------------------------------------------------------------------------
 
-# First, moving path to src directory, allowing for direct import of package
+# First, ignoring isort and flake8 for this file
+
+# isort: skip_file
+# flake8: noqa
+
+# Then, moving path to src directory, allowing for direct import of package
 
 import os
 import sys

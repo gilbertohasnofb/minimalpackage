@@ -7,7 +7,7 @@ Example of minimal package.
 Install via:
 
 ```
-~$ python3 -m pip install git+https://github.com/gilberto-agostinho/minimalpackage
+~$ python3 -m pip install git+https://github.com/gilbertohasnofb/minimalpackage
 ```
 
 # Contributing

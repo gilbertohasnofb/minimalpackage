@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "minimalpackage"
-description = "Example of minimal package."
+description = "A minimal, working example of how to structure a proper installable Python package."
 authors = [{name = "Gilberto Agostinho", email = "gilbertohasnofb@gmail.com"}]
 readme = "README.md"
 license = {file = "LICENSE"}
